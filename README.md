@@ -1,24 +1,25 @@
-# README
+# Single Page Restaurant App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Key requirements: Company needs multilingual app to promote their restaurant to locals and tourists.
 
-Things you may want to cover:
+## Models
+- Devise 
+- 2x Galary images -> images (STI) 
+- Welcome -> title, text, image
+- Order -> title, text
+- Assortment -> title, text, pdf
+- Events ->  title, text, pdf
 
-* Ruby version
+## Features
+- Multilingual website NL/DE/EN
+- Facebook and instagram streaming
+- Contact form for catering
+- Possible to order online
+- PDF upload for menu
 
-* System dependencies
+UI
+-Bootstrap -> formatting
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TODO:
+- config/initializers/devise.rb   Get correct email address from a domain you own as it requires authentication.
