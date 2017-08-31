@@ -3,7 +3,7 @@
 ## Key requirements: Company needs multilingual app to promote their restaurant to locals and tourists.
 
 ## Models
-- Devise 
+- Devise -> Admin
 - 2x Galary images -> images (STI) 
 - Welcome -> title, text, image
 - Order -> title, text
