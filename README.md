@@ -23,3 +23,4 @@ UI
 
 TODO:
 - config/initializers/devise.rb   Get correct email address from a domain you own as it requires authentication.
+- Implement bullet point in nav

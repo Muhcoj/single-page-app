@@ -17,3 +17,142 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+	background-color: #bdd5e2;
+	color: #24353e;
+	font-family: "Gill Sans W04 Book", "Gill Sans", Helvetica, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 960px) {
+	.wrapper {
+    max-width: 760px;
+    }
+}
+
+
+
+/* Header */
+@media only screen and (min-width: 600px) {
+	.site-header span {
+		display: block;
+		padding: 95px 0;
+		padding-bottom: 75px;
+    width: 500px;
+    height: 245;
+    margin: 0 auto;
+	}
+}
+
+
+
+/* Navbart */
+
+.pos-ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-wrapper {
+  padding: 0;
+  padding-bottom: 30px;
+}
+
+.site-nav {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+
+.site-nav a {
+    position: relative;
+    font-size: 13px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 24px;
+    color: #24353e;
+    text-decoration: none;
+}
+
+.site-nav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #24353e;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.site-nav a:hover:before{
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+@media only screen and (min-width: 600px) {
+	.site-nav li {
+	  display: inline;
+	  margin: 0;
+	  text-align: center;
+	  width: 100%;
+    padding-bottom: 25px;
+    word-spacing: 15px;
+ 	}
+}
+
+@media only screen and (min-width: 960px) {
+	.site-nav ul {
+	  max-width: 760px;
+	}
+}
+
+.nav-fix {
+	word-spacing: 1px;
+}
+
+.bullet {
+
+}
+
+
+
+
+
+
+
+
+
+hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #24353e;
+}
+
+.nav-wrapper hr {
+    margin: 0;
+    border: none;
+    border-bottom: 1px solid #111;
+}

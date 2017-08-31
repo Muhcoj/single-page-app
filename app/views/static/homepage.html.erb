@@ -1,1 +1,78 @@
-<h1>Tijger en de Vis</h1>
+<header class=" site-header" style="height:425px; width: 100%; background-color: #24353e; padding:10px;">
+	<span>
+		<%= image_tag("tendvtrans.png", alt: "Tijger en de Vis") %>
+	</span>
+
+</header>
+
+<div class="sticky-wrapper" style="height: 96px;">
+	<div class="wrapper nav-wrapper">
+  	<nav class="site-nav" role="navigation">
+  		<ul class="desktop-nav pos-ul">
+	  		<li class="active">
+          <%= link_to('Welkom', "#welkom") %>
+        </li>
+        <li class="bullet"></li>
+        <li>
+          <%= link_to('Bestel', "#bestel") %>
+        </li>
+        <li class="bullet"></li>
+        <li>
+          <%= link_to('Assortiment', "#assortiment") %>
+        </li>
+        <li class="bullet"></li>
+        <li>
+          <%= link_to('Op locatie', "#oplocatie", class: "nav-fix") %>
+        </li>
+        <li class="bullet"></li>
+        <li>
+          <%= link_to('Contact', "#contact") %>
+        </li>
+      </ul>
+  	</nav>
+  	<hr>
+	</div>
+</div>
+
+
+
+<!-- TODO TODO TODO TODO TODO -->
+
+
+<div class="lp-wrap">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+    	<% @galleries.each do |gallery| %>
+      <div class="item<%= " active" if gallery == @galleries.first %>">
+        <%= image_tag(gallery.image_url, class: "img-responsive") %>
+        <div class="carousel-caption lp-car-product-name">
+          <%= gallery.name %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div><!-- End lp-wrap -->
+
+
+
+
+<!-- TODO TODO TODO TODO TODO -->
