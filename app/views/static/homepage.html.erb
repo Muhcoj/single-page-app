@@ -36,7 +36,7 @@
 
 
 
-<!-- TODO TODO TODO TODO TODO -->
+
 
 
 <div class="lp-wrap">
@@ -50,14 +50,14 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-    	<% @galleries.each do |gallery| %>
-      <div class="item<%= " active" if gallery == @galleries.first %>">
-        <%= image_tag(gallery.image_url, class: "img-responsive") %>
+    	<%# @galleries.each do |gallery| %>
+      <div class="item<%#= " active" if gallery == @galleries.first %>">
+        <%#= image_tag(gallery.image_url, class: "img-responsive") %>
         <div class="carousel-caption lp-car-product-name">
-          <%= gallery.name %>
+          <%#= gallery.name %>
         </div>
       </div>
-      <% end %>
+      <%# end %>
     </div>
 
     <!-- Controls -->
@@ -74,5 +74,3 @@
 
 
 
-
-<!-- TODO TODO TODO TODO TODO -->
