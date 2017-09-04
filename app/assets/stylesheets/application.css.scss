@@ -81,7 +81,7 @@ body {
 .site-nav a {
     position: relative;
     font-size: 13px;
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     line-height: 24px;
@@ -113,11 +113,8 @@ body {
 @media only screen and (min-width: 600px) {
 	.site-nav li {
 	  display: inline;
-	  margin: 0;
+	  margin: 0 3px;
 	  text-align: center;
-	  width: 100%;
-    padding-bottom: 25px;
-    word-spacing: 15px;
  	}
 }
 
@@ -132,7 +129,7 @@ body {
 }
 
 .bullet {
-
+  font-size: 0.3em;
 }
 
 
