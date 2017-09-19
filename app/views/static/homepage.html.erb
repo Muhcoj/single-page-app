@@ -53,30 +53,27 @@
     </ol> -->
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner">
+<!--     <div class="carousel-inner">
       <div class="item active">
-        <%=image_tag("vistest.jpg", class: "img-responsive", alt: "Tijger") %>
+        <%#=image_tag("vistest.jpg", class: "img-responsive", alt: "Tijger") %>
       </div>
 
       <div class="item">
-        <%=image_tag("food.jpg", class: "img-responsive", alt: "Tijger") %>
+        <%#=image_tag("food.jpg", class: "img-responsive", alt: "Tijger") %>
       </div>
 
       <div class="item">
-        <%=image_tag("tomato.jpg", class: "img-responsive", alt: "Tijger") %>
+        <%#=image_tag("tomato.jpg", class: "img-responsive", alt: "Tijger") %>
       </div>
-    </div>
+    </div>  -->
 
-    <!-- <div class="carousel-inner" role="listbox">
-    	<%# @galleries.each do |gallery| %>
-      <div class="item<%#= " active" if gallery == @galleries.first %>">
-        <%#= image_tag(gallery.image_url, class: "img-responsive") %>
-        <div class="carousel-caption lp-car-product-name">
-          <%#= gallery.name %>
+    <div class="carousel-inner" role="listbox">
+    	<% @galleries.each do |gallery| %>
+        <div class="item<%= " active" if gallery == @galleries.first %>"> 
+            <%= image_tag(gallery.image, class: "img-responsive") %>
         </div>
-      </div>
-      <%# end %>
-    </div> -->
+      <% end %>
+    </div>  
 
     <!-- Controls -->
 <!--     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">

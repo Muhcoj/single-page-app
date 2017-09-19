@@ -11,6 +11,13 @@ describe 'navigate' do
 			visit galleries_path
 			expect(page.find('#image_gallery')['src']).to have_content 'default.png'
 		end
+
+		it 'has a list of images' do 
+			image1 = Gallery.create(title: "Some Title", image: "default.png")
+			image2 = Gallery.create(title: "Some Other Title", image: "test.png")
+			visit galleries_path
+			expect(page).to have_content(/default.png|test.png/)
+		end
 	end
 
 	describe 'creation' do 

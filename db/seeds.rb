@@ -8,4 +8,5 @@
 
 10.times do |gallery|
 	Gallery.create!(title: "Some title", image: "default.png")
+	#Gallery.create!(title: "Some title", image: File.open(File.join(Rails.root, 'vistest.jpg')))
 end

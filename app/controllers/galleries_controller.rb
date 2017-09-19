@@ -1,6 +1,7 @@
 class GalleriesController < ApplicationController
 	before_action :set_gallery, only: [:show]
 	def index
+		@galleries = Gallery.all
 	end
 
 	def new
@@ -11,7 +12,7 @@ class GalleriesController < ApplicationController
 		@gallery = Gallery.new(gallery_params)
 
 		if @gallery.save
-			redirect_to @gallery, notice: 'Your update was successful'
+			redirect_to root_path, notice: 'Your update was successful'
 		else
 			render :new
 		end
