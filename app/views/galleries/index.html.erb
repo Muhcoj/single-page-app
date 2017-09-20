@@ -1,3 +1,13 @@
-<%=  @galleries.inspect %>
-<%= image_tag('default.png', id: 'image_gallery', class: "img-responsive") %>
+<% @galleries.each do |gallery| %> 
+	<%# link_to edit_gallery_path(gallery) do %>
+		<div class="gallery-index-wrap">
+	  	<%= image_tag(gallery.image, class: "img-responsive gallery-index") %>
+	  	<div class="gallery-index-middle">
+				<div class="gallery-index-text">Wijzig Foto</div>
+			</div>
+	  </div>
+	<%# end %>
+<% end %>
+
+
 
