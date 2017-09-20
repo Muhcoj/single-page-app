@@ -1,0 +1,11 @@
+<h1>Wijzig foto</h1>
+
+<%= form_for @gallery do |f| %>
+
+  <%= f.text_field :title %>
+  <%= f.file_field :image %>
+  <%#= f.file_field :image %> 
+
+  <%= f.submit 'Save' %>
+
+<% end %>

@@ -1,7 +1,7 @@
 class GalleriesController < ApplicationController
-	before_action :set_gallery, only: [:show]
+	before_action :set_gallery, only: [:show, :edit]
 	before_action :authenticate_user!
-	
+
 	def index
 		@galleries = Gallery.all
 	end
@@ -15,7 +15,7 @@ class GalleriesController < ApplicationController
 		@gallery.admin_id = current_admin.id
 
 		if @gallery.save
-			redirect_to root_path, notice: 'Your update was successful'
+			redirect_to root_path, notice: 'Foto Toegevoegd'
 		else
 			render :new
 		end
@@ -24,6 +24,16 @@ class GalleriesController < ApplicationController
 	def show
 	end
 
+	def edit
+	end
+
+	def update
+		if
+			@gallery.update(gallery_params)
+		  redirect_to @gallery, notice: 'Foto gewijzigd!'
+	  else
+	  	render :edit
+	end
 
 
 	private
