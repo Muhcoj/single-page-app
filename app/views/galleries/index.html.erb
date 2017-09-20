@@ -3,13 +3,12 @@
 		<div class="gallery-index-wrap">
 	  	<%= image_tag(gallery.image, class: "img-responsive gallery-index") %>
 	  	<div class="gallery-index-middle">
-				<div class="gallery-index-text">Wijzig Foto</div>
+				<%= link_to 'Wijzig Foto', edit_gallery_path(gallery), class: "gallery-index-text" %>
 			</div>
 	  </div>
-	  <%= link_to 'Edit', edit_gallery_path(gallery) %>
 	<%# end %>
 <% end %>
-<%= link_to 'Edit', edit_gallery_path(gallery) %>
+
 
 
 

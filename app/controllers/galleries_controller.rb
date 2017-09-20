@@ -1,6 +1,6 @@
 class GalleriesController < ApplicationController
-	before_action :set_gallery, only: [:show, :edit]
-	before_action :authenticate_user!
+	before_action :set_gallery, only: [:show, :edit, :update]
+	before_action :authenticate_admin!
 
 	def index
 		@galleries = Gallery.all
@@ -30,9 +30,10 @@ class GalleriesController < ApplicationController
 	def update
 		if
 			@gallery.update(gallery_params)
-		  redirect_to @gallery, notice: 'Foto gewijzigd!'
+		  redirect_to galleries_path, notice: 'Foto gewijzigd!'
 	  else
 	  	render :edit
+	  end
 	end
 
 

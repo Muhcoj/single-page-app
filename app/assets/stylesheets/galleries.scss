@@ -68,3 +68,29 @@
   padding: 16px 32px;
 }
 
+.gallery-index-text:hover {
+  border-radius: 10px;
+  text-decoration: none;
+  color: #ababab;
+  transition: ease .5s;
+}
+
+/********** FORM **********/
+
+.form {
+  width: 25%;
+  margin: 100px auto 0;
+}
+
+.btn-tendv {
+  color: #FFF;
+  background-color: #747474;
+  border-color: #5c5c5c;
+}
+
+.btn-tendv:hover {
+  color: #24353e;
+  background-color: #ababab;
+  border-color: #8f8f8f;
+  transition: ease .5s;
+}
