@@ -38,55 +38,50 @@
 	</div>
 </div>
 
+<%= render 'slider' %>
+<%#= render :partial 'slider', locals: {galleries: @gallery} %>
 
-
-
-
-
-<div class="lp-wrap">
-  <div id="carousel-example-generic" class="carousel fade" data-ride="carousel">
-    <!-- Indicators -->
-   <!--  <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol> -->
-
-    <!-- Wrapper for slides -->
-<!--     <div class="carousel-inner">
-      <div class="item active">
-        <%#=image_tag("vistest.jpg", class: "img-responsive", alt: "Tijger") %>
+<section class="content-block">
+  <div class="wrapper">
+    <div>
+      <header>
+        <h1 class="header-font">Welkom bij Tijger & de Vis</h1>
+      </header>
+      <hr>
+      <div>
+        <p>
+          Tijger & de Vis staat voor ambacht en kwaliteit. Vis uit onze Noordzee, dagvers gevangen. Dit
+          kenmerkt het assortiment van Tijger & de Vis. Huisgemaakte sauzen en salades, zelf ingemaakt zuur,
+          en zoveel mogelijk gebruikmakend van plaatselijke producten benadrukt het ambacht van Tijger & de
+          Vis. Terug naar de basis, maar helemaal van deze tijd en dat proef je!
+        </p>
+        <p>
+          De drijvende kracht achter Tijger en de Vis is Erik Huibers. Als kok heeft Erik zijn passie voor eten ontwikkeld. Het Amstel hotel, Jean-Jean, waar hij een 9- kreeg van Johannes van Dam en NL in Soho New York, is maar een kleine greep uit de restaurants waar Erik zijn kunsten heeft vertoond. Als ondernemer heeft Erik zich ontwikkeld in de adviesvoering met betrekking tot duurzaamheid in de horeca bij Toffe Peer. Hij heeft met Noodelicious de biologische Japanse noodle op de Nederlandse markt geïntroduceerd. De laatste zes jaar heeft Erik zijn focus gelegd op de high-end internationale evenementenorganisatie met Food collective Amsterdam.
+        </p>
+        <p>
+          Erik doet het allemaal niet alleen. Er staat een team van enthousiaste en bevlogen mensen achter hem, die hem helpen om Tijger en de Vis een succes te maken. Zowel in de keuken als in de winkel helpt het team je graag met jouw bestelling!
+        </p>
+        <p>
+          <%= image_tag("erik.jpg", alt: "Erik Huibers", class: "content-image") %>
+        </p>
       </div>
-
-      <div class="item">
-        <%#=image_tag("food.jpg", class: "img-responsive", alt: "Tijger") %>
-      </div>
-
-      <div class="item">
-        <%#=image_tag("tomato.jpg", class: "img-responsive", alt: "Tijger") %>
-      </div>
-    </div>  -->
-
-    <div class="carousel-inner" role="listbox">
-    	<% @galleries.each do |gallery| %>
-        <div class="item<%= " active" if gallery == @galleries.first %>"> 
-            <%= image_tag(gallery.image, class: "img-responsive") %>
-        </div>
-      <% end %>
-      <%= link_to 'Wijzigen', galleries_path, class: "btn btn-tendv float-right" %>
-    </div>  
-
-    <!-- Controls -->
-<!--     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a> -->
+    </div>
   </div>
-</div><!-- End lp-wrap -->
+</section>
 
 
 
+<section class="content-block">
+  <div class="wrapper">
+    <div>
+      <header>
+        <h1 class="header-font">Bestel</h1>
+      </header>
+      <hr>
+      <div>
+        
+  
+      </div>
+    </div>
+  </div>
+</section>

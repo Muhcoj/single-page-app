@@ -40,6 +40,44 @@ body {
     }
 }
 
+.relative {
+  position: relative;
+}
+
+.header-font {
+  text-align: center;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 24px;
+  margin: 0;
+}
+
+hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #24353e;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 25px;
+  text-align: justify;
+  margin: 0 0 1.5em;
+}
+
+.content-block {
+  padding-top: 42px;
+}
+
+.content-image {
+  display: block;
+  max-width: 100%;
+}
+
 
 
 /* Header */
@@ -132,25 +170,11 @@ body {
 }
 
 
-
-
-
-
-
-
-
-hr {
-    display: block;
-    margin: 1em 0;
-    padding: 0;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #24353e;
-}
-
 .nav-wrapper hr {
     width: 88%;
     margin: auto;
     border: none;
     border-bottom: 1px solid #24353e;
 }
+
+
