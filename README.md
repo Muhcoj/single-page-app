@@ -24,3 +24,5 @@ UI
 TODO:
 - config/initializers/devise.rb   Get correct email address from a domain you own as it requires authentication.
 - Implement bullet point in nav
+- Add gem Carrierwave-imageoptimizer
+- Add pixelcog parallax scrolling and change background color from body to sections. 

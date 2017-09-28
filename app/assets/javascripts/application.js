@@ -15,4 +15,5 @@
 //= require gritter
 //= require jquery_ujs
 //= require turbolinks
+//= require today.js
 //= require_tree .

@@ -1,6 +1,6 @@
 <header class=" site-header" style="height:325px; width: 100%;">
 	<span style="    background-color: #24353e; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
-		<%= image_tag("tendvtrans.png", alt: "Tijger en de Vis") %>
+		<%= image_tag("tendvtrans.png", alt: "Tijger en de Vis", class: "img-responsive") %>
 	</span>
 
 </header>
@@ -34,12 +34,15 @@
         </li>
       </ul>
   	</nav>
-  	<hr>
+  	<!-- <hr> -->
 	</div>
 </div>
 
 <%= render 'slider' %>
 <%#= render :partial 'slider', locals: {galleries: @gallery} %>
+
+
+<!-- WELCOME -->
 
 <section class="content-block">
   <div class="wrapper">
@@ -70,18 +73,211 @@
 </section>
 
 
+<!-- BESTEL -->
+
+
+<section class="content-block">
+  <div class="wrapper">
+    
+      <header>
+        <h1 class="header-font">Bestel</h1>
+      </header>
+      <hr>
+
+      <div class="text-block">
+        <div class="col-right">
+          <div class="order-widget">
+            <%= link_to 'Bestel nu!', root_path, class: "btn btn-danger", id: "btn-fix"%>
+          </div>
+        </div>
+        <div class="col-left">
+          <p class="order-text">Zin in een lekker stuk vis, kreeft of misschien wel in een speciale bereiding die niet in het assortiment staat? Bestel dit dan bij ons.<br></p>
+          <p class="order-text">
+          Geef jouw bestelling aan ons door, wij nemen dezelfde dag binnen onze openingstijden contact met u op om de bestelling door te nemen en de kosten te bespreken.<br>
+          +31 20 3311371<br>
+          <a href="mailto:info@tijgerendevis.com">info@tijgerendevis.com</a></p>
+          <h3>Openingstijden</h3>
+          <p class="order-text">
+          woensdag - vrijdag 12.00 tot 20.00 uur<br>
+          zaterdag - 11.00 tot 20.00 uur<br>
+          zondag   - 12.00 tot 20.00 uur<br>
+          maandag & dinsdag gesloten
+          </p>
+          <p class="order-text"></p>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+<div class="image-wrapper">
+  <%= image_tag("kibbeling2.jpg", alt: "kibbeling", class: "content-image parallax") %>
+</div>
+<!-- <section class="module parallax parallax-1">
+</section> -->
+
+
+
+<!-- ASSORTIMENT -->
+
 
 <section class="content-block">
   <div class="wrapper">
     <div>
       <header>
-        <h1 class="header-font">Bestel</h1>
+        <h1 class="header-font">Assortiment</h1>
+      </header>
+      <hr>
+      <div class="day-order-margin">
+        <p>
+          Dagschotels en dagelijkse specialiteiten
+          Bij ons moet je zijn voor een heerlijk stukje vis met friet, pasta of stamppot. Een goed vullende dagschotel lekker voor tijdens de lunch of als diner. 
+        </p>
+        <p>
+          Het concept is simpel, maak een keuze uit de vis van de dag, kibbeling, lekkerbek of krabburger. En maak je gerecht compleet met friet en salade, pasta of stamppot. En dat voor maar 12,5!
+          Naast onze overheerlijke dagschotels kun je ook bij ons terecht voor kibbeling en lekkerbek, belegde broodjes, gemarineerde vis, en heerlijke salades. Eet het bij ons op in de winkel, neem het mee naar huis of laat het bezorgen.
+        </p>
+        <p>
+          We hebben een wisselend menu. Afgestemd op de Nederlandse visvangst en op de tijd van het jaar. Loop bij ons langs voor het meest recente menu of bekijk het hier op de website.
+        </p>
+        <p>
+        <%= link_to 'Menukaart Tijger en de Vis', asset_path("menukaart.pdf"), target: '_blank', class: "btn btn-danger", id: "btn-fix" %>
+        </p>
+        <p>
+          <%= image_tag("menubord.jpg", alt: "Haring", class: "content-image") %>
+        </p>
+        <h3>Dagspecialiteiten</h3>
+        <p>
+          Hou onze dagspecialiteit in de gaten om een graantje mee te pikken van de voordelen. 
+        </p>
+      </div>
+
+
+      <ul class="dayorder-list">
+        <li class="dayorder-container">
+          <div class="day-container">
+            <!-- <div class="dayorder-image"></div> -->
+            <div id="tue" class="dayorder-details">
+              <div class="details-wrapper">
+                <h4>Dinsdag dagschotel</h4>
+                <p>voor vis van de dag, kibbeling, lekkerbek of krabburger met friet en salade, pasta of stamppot</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="dayorder-list">
+        <li class="dayorder-container">
+          <div class="day-container">
+            <!-- <div class="dayorder-image"></div> -->
+            <div id="wed" class="dayorder-details">
+              <div class="details-wrapper">
+                <h4>Woensdag kibbelingdag</h4>
+                <p>
+                  voor een portie vers gebakken kabeljauw in speltvolkoren beslag inclusief saus ravigotte, knoflook of whiskey 
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="dayorder-list">
+        <li class="dayorder-container">
+          <div class="day-container">
+            <!-- <div class="dayorder-image"></div> -->
+            <div id="thur" class="dayorder-details">
+              <div class="details-wrapper">
+                <h4>Donderdag 5% korting op je rekening</h4>
+                <p>
+                 ongeacht de grootte van de bestelling ontvang je 5% korting op de totale rekening 
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="dayorder-list">
+        <li class="dayorder-container">
+          <div class="day-container">
+            <!-- <div class="dayorder-image"></div> -->
+            <div id="fri" class="dayorder-details">
+              <div class="details-wrapper">
+                <h4>Vongele vrijdag</h4>
+                <p>
+                 een goed gevuld bord vongole in knoflook, dille, zwarte peper, en chilisaus, afgeblust met prosecco en geserveerd met een brood of pasta
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="dayorder-list">
+        <li class="dayorder-container">
+          <div class="day-container">
+            <!-- <div class="dayorder-image"></div> -->
+            <div id="sat" class="dayorder-details">
+              <div class="details-wrapper">
+                <h4>Zaterdag Kibbelingdag</h4>
+                <p>
+                  voor een portie vers gebakken kabeljauw in speltvolkoren beslag inclusief saus ravigotte, knoflook of whiskey 
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="dayorder-list">
+        <li class="dayorder-container">
+          <div class="day-container">
+            <!-- <div class="dayorder-image"></div> -->
+            <div id="sun" class="dayorder-details">
+              <div class="details-wrapper">
+                <h4>Zondag gratis bezorging in de buurt</h4>
+                <p>
+                  Woon je in de Staatslieden, Zeehelden, Haarlemmerplein, Jordaan of Gouden Reael dan bezorgt Tijger en de Vis het eten gratis
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- OP LOCATIE -->
+
+<section class="content-block">
+  <div class="wrapper">
+    <div>
+      <header>
+        <h1 class="header-font">Op Locatie</h1>
       </header>
       <hr>
       <div>
-        
-  
+        <p>
+          <%= image_tag("oplocatie.jpg", alt: "Op Locatie", class: "content-image") %>
+        </p>
+        <p>
+          Tijger & de Vis is nu ook beschikbaar op locatie!
+          Door middel van een foodtruck is het nu ook mogelijk om Tijger & de Vis in te huren op locatie. Een feest op het werk, een partijtje in de tuin of een groot evenement, het is allemaal mogelijk.
+        </p>
+        <p>
+          Voor het gemak geven we een aantal voorbeelden van de mogelijkheden. Het spreekt voor zich dat we alles afstemmen op jouw wensen. Laat ons weten wat je wil, we denken graag met je mee.
+        </p>
+        <p>
+          <%= link_to 'Op locatie voorbeeld gerechten.', asset_path("opLocatieMenu.pdf"), target: '_blank', class: "btn btn-danger", id: "btn-fix" %>
+        </p>
+        <p>
+          Voor vragen kun je contact opnemen met Erik Huibers op 06 – 39 22 02 01 of via <a href="mailto:info@tijgerendevis.com">info@tijgerendevis.com</a>.
+        </p>
+        <p>
+          <%= image_tag("tijgerdevis_oplocatie_menu.png", alt: "Op Locatie", class: "content-image") %>
+        </p>
       </div>
     </div>
   </div>
 </section>
+
+

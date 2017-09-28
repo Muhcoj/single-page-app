@@ -13,6 +13,29 @@
     <%= yield %>
 
     
+    <!-- ============================= -->
+    <!-- All your JavaScript comes now -->
+    <!-- ============================= -->
+
+    <script>
+    (function(){
+      var parallax = document.querySelectorAll(".parallax"),
+          speed = 0.2;
+
+      window.onscroll = function(){
+        [].slice.call(parallax).forEach(function(el,i){
+
+          var windowYOffset = window.pageYOffset,
+              elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+          el.style.backgroundPosition = elBackgrounPos;
+        });
+      };
+    })();
+    </script>
+
+    <%= javascript_include_tag "today", "data-turbolinks-track" => true  %>
+
     <%= js add_gritter(flash[:notice], title: "Tijger en de Vis", sticky: false, time: 3000) %>
   </body>
 </html>
