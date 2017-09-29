@@ -34,6 +34,10 @@ body {
   padding: 0 20px;
 }
 
+.clear-padding {
+  padding: 0;
+}
+
 /**** CLEARFIX WRAPPER ******/
 
 .wrapper:before, .wrapper:after {
@@ -243,23 +247,20 @@ a, a:active, a:visited {
   line-height: 25px;
 }
 
-.image-wrapper {
-  position: relative;
-  height: 538px;
-  padding-top: 36px;
-}
-.image-wrapper.content-image {
-  position: relative;
-}
 
-.parallax {
-  object-fit: contain;
-}
+
+#mainslider {
+    height: 500px;
+    width: 100%;
+    background:  center no-repeat;
+    background-size: cover;
+} 
+
 
 /*
 section.module.parallax-1 {
   background-image: url('/assets/kibbeling.jpg');
-
+ url('kibbeling.jpg')
 }
 
 section.module.parallax {
