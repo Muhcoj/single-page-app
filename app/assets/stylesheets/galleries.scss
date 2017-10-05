@@ -23,6 +23,11 @@
     opacity: 1;
 }
 
+#image-tag {
+  height: 480px; 
+  width: auto; 
+  margin: auto;
+}
 
 /********** INDEX ******/
 
@@ -34,10 +39,10 @@
 }
 
 .gallery-index {
-  margin: 50px 0;
+  margin: 50px auto;
   opacity: 1;
   display: block;
-  width: 100%;
+  width: 700px;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
@@ -73,6 +78,10 @@
   text-decoration: none;
   color: #ababab;
   transition: ease .5s;
+}
+
+.gallery-index-text:visited {
+  color: white;
 }
 
 /********** FORM **********/

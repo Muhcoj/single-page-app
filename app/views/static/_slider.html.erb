@@ -1,5 +1,5 @@
 <div class="">
-  <div id="carousel-example-generic" class="carousel fade relative" data-ride="carousel">
+  <div id="carousel-example-generic" class="carousel fade relative" data-ride="carousel" data-slide-to="0">
     <!-- Indicators -->
    <!--  <ol class="carousel-indicators">
       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -24,8 +24,8 @@
     <%#= link_to 'Wijzigen', galleries_path, class: "btn btn-tendv float-right" %>
     <div class="carousel-inner" role="listbox">
     	<% @galleries.each do |gallery| %>
-        <div class="item<%= " active" if gallery == @galleries.first %>"> 
-            <%= image_tag(gallery.image, class: "") %>
+        <div class="item<%= " active" if gallery == @galleries.first %>" > 
+            <%= image_tag(gallery.image, id: "image-tag") %>
         </div>
       <% end %>
     </div>  

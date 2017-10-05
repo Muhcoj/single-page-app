@@ -130,6 +130,17 @@ a, a:active, a:visited {
   text-decoration: none;
 }
 
+.btn-tendv-red {
+  background-color: #c9302c;
+  border-color: #ac2925;
+}
+
+.btn-tendv-red:hover {
+  background-color: #ce4441;
+  border-color: #b43e3a;
+  transition: ease .5s;
+}
+
 /* Header */
 @media only screen and (min-width: 600px) {
 	.site-header span {
@@ -153,7 +164,6 @@ a, a:active, a:visited {
 
 .nav-wrapper {
   padding: 0;
-  padding-bottom: 30px;
 }
 
 .site-nav {
@@ -340,11 +350,119 @@ section.module.parallax {
 .today {
   background: #bf2300;
   border: solid 2px white;
+  border-radius: 15px;
   color: white;
-  border-radius: 15px
+}
+
+
+/****** VOLG ONS ****/
+
+.col-right-social {
+  float: right;
+  margin-bottom: 0;
+  width: 40%;
+  height: 250px;
+  border: solid 1px black;
+  margin: auto;
+}
+
+.col-left-social {
+  float: left;
+  width: 40%;
+  height: 250px;
+  border: solid 1px black;
+  margin: auto;
+}
+
+span.icon {
+  display: block;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+span.icon-instagram {
+  background: url(/assets/icon-instagram.png) no-repeat center center;
+  width: 35px;
+  height: 34px;
+}
+
+span.icon-twitter {
+  background: url(/assets/icon-twitter.png) no-repeat center center;
+  width: 41px;
+  height: 34px;
+}
+
+
+/****** CONTACT ******/
+
+
+.col-right-alt {
+  float: right;
+  margin-bottom: 0;
+  width: 45%;
+
+}
+
+.col-left-alt {
+  float: left;
+  width: 50%;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+.btn-tendv {
+  background-color: #25363f;
+  color: white;
+}  
+
+.btn-tendv:hover {
+  background-color: #bf2300;
+  border-color: transparent;
+  color: white;
+  transition: ease .5s;
+}    
+
+#map {
+  height: 200px;
+  width: 100%;
+}
+
+.contact {
+  width: 75%;
+}
+
+.vcard {
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 27px;
+  text-transform: uppercase;
+  padding-top: 30px;
+}
+
+.vcard p {
+  margin: 0;
 }
 
 
 
+/****** FOOTER ***********/
 
+.site-footer {
+  margin-top: 60px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-top: 1px solid #111;
+  text-align: center;
+}
+
+.site-footer small {
+  margin-bottom: 90px;
+  padding: 0 20px;
+  font-size: 13px;
+  font-size: 1.3rem;
+  text-align: center;
+}
 

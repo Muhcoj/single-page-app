@@ -1,11 +1,14 @@
-<header class=" site-header" style="height:325px; width: 100%;">
-	<span style="    background-color: #24353e; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
-		<%= image_tag("tendvtrans.png", alt: "Tijger en de Vis", class: "img-responsive") %>
+<header class=" site-header" >
+  <% if current_admin %>
+    <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
+  <% end %>
+	<span >
+		<%= image_tag("tendvtrans-green.png", alt: "Tijger en de Vis", class: "img-responsive") %>
 	</span>
-
+  
 </header>
 
-<div class="sticky-wrapper" style="height: 96px;">
+<div class="sticky-wrapper">
 	<div class="wrapper nav-wrapper">
   	<nav class="site-nav" role="navigation">
   		<ul class="desktop-nav pos-ul">
@@ -24,11 +27,11 @@
         <li>
           <%= link_to('Op locatie', "#oplocatie", class: "nav-fix") %>
         </li>
-        <li class="glyphicon glyphicon-asterisk bullet"></li>
+        <!-- <li class="glyphicon glyphicon-asterisk bullet"></li>
         <li>
-          <%= link_to('Volg ons', "#followus") %>
+          <%#= link_to('Volg ons', "#followus") %>
         </li>
-        <li class="glyphicon glyphicon-asterisk bullet"></li>
+ -->        <li class="glyphicon glyphicon-asterisk bullet"></li> 
         <li>
           <%= link_to('Contact', "#contact") %>
         </li>
@@ -40,7 +43,6 @@
 
 <%= render 'slider' %>
 <%#= render :partial 'slider', locals: {galleries: @gallery} %>
-
 
 <!-- WELCOME -->
 
@@ -64,9 +66,9 @@
         <p>
           Erik doet het allemaal niet alleen. Er staat een team van enthousiaste en bevlogen mensen achter hem, die hem helpen om Tijger en de Vis een succes te maken. Zowel in de keuken als in de winkel helpt het team je graag met jouw bestelling!
         </p>
-        <p>
-          <%= image_tag("erik.jpg", alt: "Erik Huibers", class: "content-image") %>
-        </p>
+<!--         <p>
+          <%#= image_tag("erik.jpg", alt: "Erik Huibers", class: "content-image") %>
+        </p> -->
       </div>
     </div>
   </div>
@@ -87,7 +89,14 @@
       <div class="text-block">
         <div class="col-right">
           <div class="order-widget">
-            <%= link_to 'Bestel nu!', root_path, class: "btn btn-danger", id: "btn-fix"%>
+            <%= link_to 'Bestel nu!', root_path, class: "btn btn-tendv-red", id: "btn-fix"%>
+            <h3>Openingstijden</h3>
+            <p class="order-text">
+            woensdag - vrijdag 12.00 tot 20.00 uur<br>
+            zaterdag - 11.00 tot 20.00 uur<br>
+            zondag   - 12.00 tot 20.00 uur<br>
+            maandag & dinsdag gesloten
+            </p>
           </div>
         </div>
         <div class="col-left">
@@ -96,13 +105,6 @@
           Geef jouw bestelling aan ons door, wij nemen dezelfde dag binnen onze openingstijden contact met u op om de bestelling door te nemen en de kosten te bespreken.<br>
           +31 20 3311371<br>
           <a href="mailto:info@tijgerendevis.com">info@tijgerendevis.com</a></p>
-          <h3>Openingstijden</h3>
-          <p class="order-text">
-          woensdag - vrijdag 12.00 tot 20.00 uur<br>
-          zaterdag - 11.00 tot 20.00 uur<br>
-          zondag   - 12.00 tot 20.00 uur<br>
-          maandag & dinsdag gesloten
-          </p>
           <p class="order-text"></p>
         </div>
       </div>
@@ -146,7 +148,7 @@
           We hebben een wisselend menu. Afgestemd op de Nederlandse visvangst en op de tijd van het jaar. Loop bij ons langs voor het meest recente menu of bekijk het hier op de website.
         </p>
         <p>
-        <%= link_to 'Menukaart Tijger en de Vis', asset_path("menukaart.pdf"), target: '_blank', class: "btn btn-danger", id: "btn-fix" %>
+        <%= link_to 'Menukaart Tijger en de Vis', asset_path("menukaart.pdf"), target: '_blank', class: "btn btn-tendv-red", id: "btn-fix" %>
         </p>
         <p>
           <%= image_tag("menubord.jpg", alt: "Haring", class: "content-image") %>
@@ -272,7 +274,7 @@
           Voor het gemak geven we een aantal voorbeelden van de mogelijkheden. Het spreekt voor zich dat we alles afstemmen op jouw wensen. Laat ons weten wat je wil, we denken graag met je mee.
         </p>
         <p>
-          <%= link_to 'Op locatie voorbeeld gerechten.', asset_path("opLocatieMenu.pdf"), target: '_blank', class: "btn btn-danger", id: "btn-fix" %>
+          <%= link_to 'Op locatie voorbeeld gerechten.', asset_path("opLocatieMenu.pdf"), target: '_blank', class: "btn btn-tendv-red", id: "btn-fix" %>
         </p>
         <p>
           Voor vragen kun je contact opnemen met Erik Huibers op 06 – 39 22 02 01 of via <a href="mailto:info@tijgerendevis.com">info@tijgerendevis.com</a>.
@@ -284,5 +286,89 @@
     </div>
   </div>
 </section>
+
+<!-- VOLG ONS -->
+
+<section class="content-block">
+  <div class="wrapper">
+    <div>
+      <header>
+        <h1 class="header-font">Volg Ons</h1>
+      </header>
+      <hr>
+      <div class="text-block">
+        <div class="col-right-social">
+          <span class="icon-twitter icon"></span>
+        </div>
+        <div class="col-left-social">
+          <span class="icon-instagram icon"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT -->
+
+
+<section class="content-block">
+  <div class="wrapper">
+    <div>
+      <header>
+        <h1 class="header-font">Contact</h1>
+      </header>
+      <hr>
+      <div class="text-block clearfix">
+        <div class="col-right-alt">
+          <div class="contact">
+            <%= form_tag("/static/thank_you") do %>
+              <div class="form-group">
+                <%= text_field_tag :name, nil, placeholder: "Naam", class: "form-control" %>
+              </div><!-- end .form-group --> 
+              <div class="form-group">
+                <%= text_field_tag :email, nil, placeholder: "Email", class: "form-control", required: "required"%>
+              </div><!-- end .form-group --> 
+              <div class="form-group">
+                <%= text_area_tag :message, nil, placeholder: "Bericht", class: "form-control" %>
+              </div><!-- end .form-group --> 
+              <div class="form-group">
+                <%= submit_tag "Verzenden", class: "btn btn-tendv" %>
+              </div>
+            <% end %>
+            <div class="vcard">
+              <p>Tijger & de Vis</p>
+              <p>Lindengracht 158</p>
+              <p>1015 KK</p>
+              <p>Amsterdam</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-left-alt">
+          <div id="map" style="width:100%;height:400px">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="wrapper">
+  <footer class="site-footer">
+    <small>&copy; 2017 Tijger & de Vis</small>
+
+
+  </footer>
+</div>
+
+
+
+
+
+
+
 
 

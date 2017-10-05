@@ -17,26 +17,27 @@
     <!-- All your JavaScript comes now -->
     <!-- ============================= -->
 
-    <script>
-    (function(){
-      var parallax = document.querySelectorAll(".parallax"),
-          speed = 0.2;
-
-      window.onscroll = function(){
-        [].slice.call(parallax).forEach(function(el,i){
-
-          var windowYOffset = window.pageYOffset,
-              elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-          el.style.backgroundPosition = elBackgrounPos;
-        });
-      };
-    })();
-    </script>
 
     <%= javascript_include_tag "today", "data-turbolinks-track" => true  %>
 
     <%= js add_gritter(flash[:notice], title: "Tijger en de Vis", sticky: false, time: 3000) %>
+
+    <script>
+      function initMap() {
+        var tijgerEnDeVis = {lat: 52.380229, lng: 4.884260};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 19,
+          center: tijgerEnDeVis
+        });
+        var marker = new google.maps.Marker({
+          position: tijgerEnDeVis,
+          map: map
+          // animation: google.maps.Animation.BOUNCE
+        });
+      }
+    </script>
+
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}&callback=initMap" %>
   </body>
 </html>
 
