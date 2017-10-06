@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SinglePageApp</title>
+    <title>Tijger en de Vis</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -22,7 +22,19 @@
 
     <%= js add_gritter(flash[:notice], title: "Tijger en de Vis", sticky: false, time: 3000) %>
 
-    <script>
+    <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
+    <script type="text/javascript">
+      function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+              x.className += " responsive";
+          } else {
+              x.className = "topnav";
+          }
+      }
+    </script>
+    
+    <script type="text/javascript">
       function initMap() {
         var tijgerEnDeVis = {lat: 52.380229, lng: 4.884260};
         var map = new google.maps.Map(document.getElementById('map'), {

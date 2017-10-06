@@ -10,31 +10,34 @@
 
 <div class="sticky-wrapper">
 	<div class="wrapper nav-wrapper">
-  	<nav class="navbar site-nav" role="navigation">
+  	<nav class="navbar site-nav topnav" id="myTopnav" role="navigation">
   		<ul class="desktop-nav pos-ul">
-	  		<li class="active">
+	  		<li class="nav-display">
           <%= link_to('Welkom', "#welkom") %>
         </li>
-        <li class="glyphicon glyphicon-asterisk bullet"></li>
-        <li>
+        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+        <li class="nav-display">
           <%= link_to('Bestel', "#bestel") %>
         </li>
-        <li class="glyphicon glyphicon-asterisk bullet"></li>
-        <li>
+        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+        <li class="nav-display">
           <%= link_to('Assortiment', "#assortiment") %>
         </li>
-        <li class="glyphicon glyphicon-asterisk bullet"></li>
-        <li>
+        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+        <li class="nav-display">
           <%= link_to('Op locatie', "#oplocatie", class: "nav-fix") %>
         </li>
         <!-- <li class="glyphicon glyphicon-asterisk bullet"></li>
-        <li>
+        <li class="nav-display">
           <%#= link_to('Volg ons', "#followus") %>
         </li>
- -->        <li class="glyphicon glyphicon-asterisk bullet"></li> 
-        <li>
+ -->        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li> 
+        <li class="nav-display">
           <%= link_to('Contact', "#contact") %>
         </li>
+        
+          <%= link_to('toggle', "#", style: "font-size:15px;", class: "icon", onclick: "myFunction()") %>
+        
       </ul>
   	</nav>
   	<!-- <hr> -->
@@ -167,6 +170,7 @@
             <div id="tue" class="dayorder-details">
               <div class="details-wrapper">
                 <h4>Dinsdag dagschotel</h4>
+                <hr>
                 <p>voor vis van de dag, kibbeling, lekkerbek of krabburger met friet en salade, pasta of stamppot</p>
               </div>
             </div>
@@ -180,6 +184,7 @@
             <div id="wed" class="dayorder-details">
               <div class="details-wrapper">
                 <h4>Woensdag kibbelingdag</h4>
+                <hr>
                 <p>
                   voor een portie vers gebakken kabeljauw in speltvolkoren beslag inclusief saus ravigotte, knoflook of whiskey 
                 </p>
@@ -195,6 +200,7 @@
             <div id="thur" class="dayorder-details">
               <div class="details-wrapper">
                 <h4>Donderdag 5% korting op je rekening</h4>
+                <hr>
                 <p>
                  ongeacht de grootte van de bestelling ontvang je 5% korting op de totale rekening 
                 </p>
@@ -210,6 +216,7 @@
             <div id="fri" class="dayorder-details">
               <div class="details-wrapper">
                 <h4>Vongele vrijdag</h4>
+                <hr>
                 <p>
                  een goed gevuld bord vongole in knoflook, dille, zwarte peper, en chilisaus, afgeblust met prosecco en geserveerd met een brood of pasta
                 </p>
@@ -225,6 +232,7 @@
             <div id="sat" class="dayorder-details">
               <div class="details-wrapper">
                 <h4>Zaterdag Kibbelingdag</h4>
+                <hr>
                 <p>
                   voor een portie vers gebakken kabeljauw in speltvolkoren beslag inclusief saus ravigotte, knoflook of whiskey 
                 </p>
@@ -240,6 +248,7 @@
             <div id="sun" class="dayorder-details">
               <div class="details-wrapper">
                 <h4>Zondag gratis bezorging in de buurt</h4>
+                <hr>
                 <p>
                   Woon je in de Staatslieden, Zeehelden, Haarlemmerplein, Jordaan of Gouden Reael dan bezorgt Tijger en de Vis het eten gratis
                 </p>
