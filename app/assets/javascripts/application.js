@@ -11,9 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require gritter
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require today.js
 //= require interface.js
