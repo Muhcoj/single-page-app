@@ -22,17 +22,6 @@
 
     <%= js add_gritter(flash[:notice], title: "Tijger en de Vis", sticky: false, time: 3000) %>
 
-    <!-- Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon -->
-    <script type="text/javascript">
-      function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-              x.className += " responsive";
-          } else {
-              x.className = "topnav";
-          }
-      }
-    </script>
     
     <script type="text/javascript">
       function initMap() {
@@ -50,6 +39,8 @@
     </script>
 
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['GOOGLE_API_KEY']}&callback=initMap" %>
+
+    <%= javascript_include_tag(:application) %>
   </body>
 </html>
 

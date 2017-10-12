@@ -9,39 +9,75 @@
 </header>
 
 <div class="sticky-wrapper">
-	<div class="wrapper nav-wrapper">
-  	<nav class="navbar site-nav topnav" id="myTopnav" role="navigation">
-  		<ul class="desktop-nav pos-ul">
-	  		<li class="nav-display">
-          <%= link_to('Welkom', "#welkom") %>
-        </li>
-        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
-        <li class="nav-display">
-          <%= link_to('Bestel', "#bestel") %>
-        </li>
-        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
-        <li class="nav-display">
-          <%= link_to('Assortiment', "#assortiment") %>
-        </li>
-        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
-        <li class="nav-display">
-          <%= link_to('Op locatie', "#oplocatie", class: "nav-fix") %>
-        </li>
-        <!-- <li class="glyphicon glyphicon-asterisk bullet"></li>
-        <li class="nav-display">
-          <%#= link_to('Volg ons', "#followus") %>
-        </li>
- -->        <li class="glyphicon glyphicon-asterisk bullet nav-display"></li> 
-        <li class="nav-display">
-          <%= link_to('Contact', "#contact") %>
-        </li>
-        
-          <%= link_to('toggle', "#", style: "font-size:15px;", class: "icon", onclick: "myFunction()") %>
-        
-      </ul>
-  	</nav>
-  	<!-- <hr> -->
-	</div>
+  <div class="wrapper nav-wrapper">
+
+      <div class="wrapper nav-wrapper">
+
+
+
+
+        <nav class="navbar site-nav" id="#" role="navigation">
+
+
+
+
+        <!--   <ul class="desktop-nav pos-ul" id="menu">
+            <li class="nav-display">
+              <%#= link_to('Welkom', "#welkom") %>
+            </li>
+            <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+            <li class="nav-display">
+              <%#= link_to('Bestel', "#bestel") %>
+            </li>
+            <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+            <li class="nav-display">
+              <%#= link_to('Assortiment', "#assortiment") %>
+            </li>
+            <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+            <li class="nav-display">
+              <%#= link_to('Op locatie', "#oplocatie", class: "nav-fix") %>
+            </li>
+             <li class="glyphicon glyphicon-asterisk bullet"></li>
+            <li class="nav-display">
+              <%#= link_to('Volg ons', "#followus") %>
+            </li>
+     -->       <!-- <li class="glyphicon glyphicon-asterisk bullet nav-display"></li> 
+            <li class="nav-display">
+              <%#= link_to('Contact', "#contact") %>
+            </li>        
+          </ul> -->
+
+          <label for="show-menu" class="show-menu">MENU<span class="hamburger">&#9776;</span></label>
+          <input type="checkbox" id="show-menu" role="button">
+            <ul id="menu" class="desktop-nav pos-ul">
+              <li class="nav-display">
+                <%= link_to('Welkom', "#welkom") %>
+              </li>
+              <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+              <li class="nav-display">
+                <%= link_to('Bestel', "#bestel") %>
+              </li>
+              <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+              <li class="nav-display">
+                <%= link_to('Assortiment', "#assortiment") %>
+              </li>
+              <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+              <li class="nav-display">
+                <%= link_to('Op locatie', "#oplocatie", class: "nav-fix") %>
+              </li>
+              <li class="glyphicon glyphicon-asterisk bullet nav-display"></li>
+              <li class="nav-display">
+                <%= link_to('Contact', "#contact") %>
+              </li> 
+            </ul>
+        </nav>
+        <!-- <hr> -->
+
+
+      </div>
+
+
+  </div>
 </div>
 
 <%= render 'slider' %>
