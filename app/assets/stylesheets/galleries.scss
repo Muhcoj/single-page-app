@@ -103,3 +103,32 @@
   border-color: #8f8f8f;
   transition: ease .5s;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*Responsive Styles*/
+@media screen and (max-width : 760px){
+  #image-tag {
+    width: 90%;
+  }
+} 
+
+@media screen and (max-width : 568px){
+  .image-tag {
+    max-height: 300px;
+  }
+} 
+
+@media screen and (max-width : 480px){
+  .image-tag {
+    max-height: 200px;
+  }
+} 
