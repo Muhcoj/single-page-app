@@ -133,7 +133,13 @@
   <div class="wrapper">
     <div>
       <header>
-        <h1 class="header-font">Welkom bij Tijger & de Vis</h1>
+        <h1 class="header-font">Welkom bij Tijger & de Vis 
+          <% if current_admin %>
+            <%= link_to('#') do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+          <% end %>
+        </h1>
       </header>
       <hr>
       <div>
@@ -165,7 +171,13 @@
   <div class="wrapper">
     
       <header>
-        <h1 class="header-font">Bestel</h1>
+        <h1 class="header-font">Bestel 
+          <% if current_admin %>
+            <%= link_to('#') do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+          <% end %>
+        </h1>
       </header>
       <hr>
 
@@ -215,7 +227,13 @@
   <div class="wrapper">
     <div>
       <header>
-        <h1 class="header-font">Assortiment</h1>
+        <h1 class="header-font">Assortiment 
+          <% if current_admin %>
+            <%= link_to('#') do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+          <% end %>
+        </h1>
       </header>
       <hr>
       <div class="day-order-margin">
@@ -236,7 +254,15 @@
         <p>
           <%= image_tag("menubord.jpg", alt: "Haring", class: "content-image") %>
         </p>
-        <h3>Dagspecialiteiten</h3>
+
+
+        <h3>Dagspecialiteiten 
+          <% if current_admin %>
+            <%= link_to('#') do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+          <% end %>
+        </h3>
         <p>
           Hou onze dagspecialiteit in de gaten om een graantje mee te pikken van de voordelen. 
         </p>
@@ -348,7 +374,13 @@
   <div class="wrapper">
     <div>
       <header>
-        <h1 class="header-font">Op Locatie</h1>
+        <h1 class="header-font">Op Locatie 
+          <% if current_admin %>
+            <%= link_to('#') do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+          <% end %>
+        </h1>
       </header>
       <hr>
       <div>
@@ -406,7 +438,13 @@
   <div class="wrapper">
     <div>
       <header>
-        <h1 class="header-font">Contact</h1>
+        <h1 class="header-font">Contact 
+          <% if current_admin %>
+            <%= link_to('#') do %>
+              <span class="glyphicon glyphicon-pencil"></span>
+            <% end %>
+          <% end %>
+        </h1>
       </header>
       <hr>
       <div class="text-block clearfix">
@@ -448,7 +486,9 @@
 <div class="wrapper">
   <footer class="site-footer">
     <small>&copy; 2017 Tijger & de Vis</small>
-
+    <% if current_admin %>
+      <%= link_to "Logout", destroy_admin_session_path, method: :delete %>
+    <% end %>
 
   </footer>
 </div>
