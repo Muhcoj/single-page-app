@@ -10,3 +10,5 @@
 	#Gallery.create!(title: "Some title", image: "default.png")
 	#Gallery.create!(title: "Some title", image: File.open(File.join(Rails.root, 'tendvtrans.png')))
 end
+
+WelcomeEntry.create(title: 'Welkom', description: 'asdfasdfasdfasdf lkjjlkjjhh')
