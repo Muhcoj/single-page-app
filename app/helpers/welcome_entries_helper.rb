@@ -1,0 +1,2 @@
+module WelcomeEntriesHelper
+end
