@@ -1,6 +1,7 @@
 class WelcomeEntriesController < ApplicationController
 	before_action :set_welcome_entry, only: [:show]
-
+	before_action :authenticate_user!
+	
 	def index
 	end
 
@@ -10,6 +11,7 @@ class WelcomeEntriesController < ApplicationController
 
 	def create
 		@welcome_entry = WelcomeEntry.new(welcome_entry_params)
+		@welcome_entry.admin_id = current_admin.id
 
 		if @welcome_entry.save
 			redirect_to @welcome_entry, notice: "The details were created successfully"
