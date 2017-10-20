@@ -1,8 +1,9 @@
 class WelcomeEntriesController < ApplicationController
 	before_action :set_welcome_entry, only: [:show]
-	before_action :authenticate_user!
-	
+	before_action :authenticate_admin!
+
 	def index
+		@welcome_entries = WelcomeEntry.all
 	end
 
 	def new
