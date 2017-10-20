@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe WelcomeEntry, type: :model do
   describe 'Creation' do
   	before do
-  		@welcome_entry = WelcomeEntry.create(title: 'Welkom', description: 'asdfasdfasdfasdf lkjjlkjjhh')
+  		@welcome_entry = FactoryGirl.create(:welcome_entry)
   	end
 
   	it 'can be created' do

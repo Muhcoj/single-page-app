@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'navigate' do
 	before do
-		@admin = Admin.create(email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf", first_name: "Jon", last_name: "Snow")
+		@admin = FactoryGirl.create(:admin)
     login_as(@admin, :scope => :admin)
 	end
 
@@ -15,12 +15,8 @@ describe 'navigate' do
 			expect(page.status_code).to eq(200)
 		end
 
-		it 'has a title of Welcome' do
-			expect(page).to have_content(/Welcome/)
-		end
-
 		it 'shows the welcome entry' do
-			welcome_entry = WelcomeEntry.create(title: 'Welkom', description: 'asdfasdfasdfasdf lkjjlkjjhh', admin_id: @admin.id)
+			welcome_entry = FactoryGirl.create(:welcome_entry)
 			visit welcome_entries_path
 			expect(page).to have_content(/asdfasdfasdfasdf lkjjlkjjhh/)
 		end
