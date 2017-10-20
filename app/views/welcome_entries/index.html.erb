@@ -1,11 +1,3 @@
 <div class="wrapper">
-	<% @welcome_entries.each do |welcome_entry| %>
-		<div class="well">
-	  	<%= welcome_entry.title %>
-	  </div>
-		<hr>
-	  <div class="well">
-	  	<%= welcome_entry.description %>
-	  </div>
-	<% end %>
+	<%= render @welcome_entries %>
 </div>

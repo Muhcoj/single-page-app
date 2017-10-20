@@ -47,4 +47,27 @@ describe 'navigate' do
 		  expect(Admin.last.welcome_entries.last.description).to eq("Some description text goes here with user association...")
 		end
 	end
+
+	describe 'edit' do
+		before do
+			@welcome_entry = FactoryGirl.create(:welcome_entry)
+		end
+
+		it 'can be reached by clicking edit on index page' do
+			visit welcome_entries_path
+
+			click_link("edit_#{@welcome_entry.id}")
+			expect(page.status_code).to eq(200)
+		end
+
+		it 'can be edited' do
+			visit edit_welcome_entry_path(@welcome_entry)
+
+			fill_in 'welcome_entry[title]', with: "Edit Welcome"
+			fill_in 'welcome_entry[description]', with: "Edited content"
+			click_on "Save"
+
+			expect(page).to have_content("Edited content")
+    end
+	end
 end

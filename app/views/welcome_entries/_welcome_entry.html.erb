@@ -1,0 +1,10 @@
+<% @welcome_entries.each do |welcome_entry| %>
+	<div class="well">
+		<%= welcome_entry.title %>
+	</div>
+	<hr>
+	<div class="well">
+		<%= welcome_entry.description %>
+	</div>
+	<%= link_to 'Wijzig', edit_welcome_entry_path(welcome_entry), id: "edit_#{welcome_entry.id}" %>
+<% end %>

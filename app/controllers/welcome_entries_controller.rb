@@ -1,5 +1,5 @@
 class WelcomeEntriesController < ApplicationController
-	before_action :set_welcome_entry, only: [:show]
+	before_action :set_welcome_entry, only: [:show, :edit, :update]
 	before_action :authenticate_admin!
 
 	def index
@@ -24,6 +24,16 @@ class WelcomeEntriesController < ApplicationController
 	def show
 	end
 
+	def edit
+	end
+
+	def update
+		if @welcome_entry.update(welcome_entry_params)
+			redirect_to @welcome_entry, notice: 'The details were edited successfully'
+		else
+			render :edit
+		end
+	end
 
 	private
 
